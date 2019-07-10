@@ -6,7 +6,7 @@
 
 ## Tradeoffs
 - Pros:
-  - The merge message defaults to `<Title of Pull Request> (PR #)` which helps us reference the PR url from changelogs or the commit history in Github since it automatically becomes an href.
+  - The merge message defaults to `<Commit Msg/Branch Name> (PR #)` which helps us reference the PR url from changelogs or the commit history in Github since it automatically becomes an href.
   - This gives maintainers an opportunity to clean up some commit messages if needed and adjust the title of the PR so that the commit history reads nicely.
   - Maintainers no longer need to monitor commit messages to see if they make sense. Or ask people to amend commits.
   - It's easy to rollback PRs.
@@ -46,4 +46,6 @@
 ## Goals
 - Make it easier for contributors and maintainers. Less complexity, less responsibility, less mistakes.
 - Offload responsibility to CI when possible
-- 
+
+## What the tree looks like
+![git tree](img/tree.png)
