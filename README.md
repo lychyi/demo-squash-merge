@@ -28,5 +28,8 @@
 - How do we trigger CI releases? Github releases? Tag and push?
 - Where does Storybook live? Should we stay on Github pages? Build and push to Netlify instead?
 - How do we do versioning with CI since we want a compact, descriptive history?
-- Shoud we version manually and do release PRs?
+- Should we version manually and do release PRs?
 - Do we ever need to reference the Storybook build at all? Should the artifacts even be in our codebase?
+
+## What the tree looks like
+![git tree](img/tree.png)
