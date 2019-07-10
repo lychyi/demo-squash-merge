@@ -1,6 +1,6 @@
 {
   "name": "demo-squash-merge",
-  "version": "0.0.0",
+  "version": "2.3.0",
   "description": "A sample repo demonstrating squash-merge",
   "main": "index.js",
   "author": "Lynn Chyi",
