@@ -1,1 +1,1 @@
-export const feature = () => "Updated Feature";
+export const newFeature = "Breaking new feature";
