@@ -25,11 +25,27 @@
 
 ## Open Questions
 - How do we handle long-running branches or future development not on the current version line?
+  - Probably not a huge issue we don't do this often and rebase should be straightforward.
 - How do we trigger CI releases? Github releases? Tag and push?
+  - We will create a PR for the changelog (which should also be release notes). This allows us to manually edit/review while also giving us a chance to automate release/publish.
 - Where does Storybook live? Should we stay on Github pages? Build and push to Netlify instead?
-- How do we do versioning with CI since we want a compact, descriptive history?
-- Should we version manually and do release PRs?
 - Do we ever need to reference the Storybook build at all? Should the artifacts even be in our codebase?
+  - Stash but we should make this similar to the PR Preview so we don't maintain two storybook CI proccesses
+- How do we do versioning with CI since we want a compact, descriptive history?
+  - We should have a changelog commit and a version commit maybe? In a PR itself so this can just be one commit since we squash.
+- Shoud we version manually and do release PRs?
+  - Yup.
+- Do we need people to rebase on upstream/master?
+  - Probably not with squashing
+  - As long as they're up-to-date, we're ok (merge commits, rebase, etc)
+- Have CI figure out how to fail the code against master instead of putting that responsibility on the PR contributor.
+  - Adjust Travis strategy to do this for us (Jenkins has this strategy, can we do it in Travis).
+- How do we handle hotfixes in supported version (e.g. 1.x) branches?
+  - Do we merge commit? Do we cherry pick? If we merge, 1.x fix into master, then we'll have to enable the merge commit PR strategy in Github for one off hotfixes. Otherwise, it's safe to only make the squash and merge strategy available to maintiners.
+
+## Goals
+- Make it easier for contributors and maintainers. Less complexity, less responsibility, less mistakes.
+- Offload responsibility to CI when possible
 
 ## What the tree looks like
 ![git tree](img/tree.png)
