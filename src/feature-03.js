@@ -1,0 +1,1 @@
+export const trifecta = ['one', 'two', 'three'];
